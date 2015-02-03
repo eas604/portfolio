@@ -1,0 +1,27 @@
+{
+  "location": {
+    "title": "Location",
+    "value": "Mobile, Alabama"
+  },
+  "web": {
+    "title": "Around the Web",
+    "links": [
+      {
+        "name": "Twitter",
+        "url": "https://twitter.com/ed_win_s",
+        "icon": "fa-twitter"
+      },
+      {
+        "name": "LinkedIn",
+        "url": "https://www.linkedin.com/profile/view?id=212025914",
+        "icon": "fa-linkedin"
+      },
+      {
+        "name": "GitHub",
+        "url": "https://github.com/eas604",
+        "icon": "fa-github"
+      }
+    ]
+  },
+  "copyright": "Copyright © Edwin Sheldon, 2015"
+}
