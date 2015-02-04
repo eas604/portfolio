@@ -1,0 +1,20 @@
+<header>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 center-block">
+                <img class="center-block" src="extras/edwin.jpg" alt="Profile Photo" title="Profile Photo">
+            </div>
+            <div class="col-lg-12 text-center">
+                <div class="intro-text">
+                    <h1 class="name">{{title}}</h1>
+                    <hr class="star-light">
+                    <p>
+                        <span class="skills" ng-repeat="skill in messages">
+                            {{skill}}<span ng-show="!$last"> —</span>
+                        </span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>

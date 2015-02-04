@@ -4,23 +4,41 @@
 angular.module('portfolio', [
     'ui.router',
     'portfolio.home',
+    'portfolio.nav',
+    'portfolio.hero',
     'portfolio.about',
-    'portfolio.footer',
-    'portfolio.nav'
+    'portfolio.footer'
 ])
     .config(['$stateProvider', function($stateProvider) {
         $stateProvider
             .state('home', {
                 url: '/',
-                templateUrl: 'home/home.html',
-                controller: 'homeCtrl'
+                controller: 'homeCtrl',
+                views: {
+                    '': {templateUrl: 'home/home.html'},
+                    'nav@home': {
+                        templateUrl: 'nav/nav.html',
+                        controller: 'navCtrl'
+                    },
+                    'hero@home': {
+                        templateUrl: 'hero/hero.html',
+                        controller: 'heroCtrl'
+                    },
+                    'about@home': {
+                        templateUrl: 'about/about.html',
+                        controller: 'aboutCtrl'
+                    },
+                    'footer@home': {
+                        templateUrl: 'footer/footer.html',
+                        controller: 'footerCtrl'
+                    }
+                }
             })
-            .state('home.nav', {
+/*            .state('home.nav', {
                 templateUrl: 'nav/nav.html',
                 controller: 'navCtrl'
             })
-            .state('about', {
-                url: '/about',
+            .state('home.about', {
                 templateUrl: 'about/about.html',
                 controller: 'aboutCtrl'
             })
@@ -28,7 +46,7 @@ angular.module('portfolio', [
                 url: '/footer',
                 templateUrl: 'footer/footer.html',
                 controller: 'footerCtrl'
-            })
+            })*/
         ;
     }])
 ;

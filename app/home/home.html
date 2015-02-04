@@ -1,26 +1,15 @@
-<div ng-controller="navCtrl" id="navigation">
-    <div ui-view>
-        <p>Loading navigation...</p>
-    </div>
+<div ui-view="nav">
+    <p>Loading nav...</p>
 </div>
 
-<header>
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12 center-block">
-                <img class="center-block" src="extras/edwin.jpg" alt="Profile Photo" title="Profile Photo">
-            </div>
-            <div class="col-lg-12 text-center">
-                <div class="intro-text">
-                    <h1 class="name">{{title}}</h1>
-                    <hr class="star-light">
-                    <p>
-                        <span class="skills" ng-repeat="skill in messages">
-                            {{skill}}<span ng-show="!$last"> —</span>
-                        </span>
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
-</header>
+<div ui-view="hero">
+    <p>Loading hero...</p>
+</div>
+
+<div ui-view="about">
+    <p>Loading about...</p>
+</div>
+
+<div ui-view="footer">
+    <p>Loading footer...</p>
+</div>

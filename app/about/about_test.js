@@ -27,16 +27,12 @@ describe('portfolio.about module', function() {
 
         it('should have a title `About`', function () {
             expect(scope.title).toBeUndefined();
-            // Ensure the $viewContentLoaded event is fired
-            scope.$broadcast('$viewContentLoaded');
             $httpBackend.flush();
             expect(scope.title).toEqual('About');
         });
 
         it('should have 3 messages', function () {
             expect(scope.messages).toBeUndefined();
-            // Ensure the $viewContentLoaded event is fired
-            scope.$broadcast('$viewContentLoaded');
             $httpBackend.flush();
             expect(scope.messages.length).toBe(3);
         });

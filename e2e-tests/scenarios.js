@@ -14,18 +14,23 @@ describe('portfolio', function() {
         sayMyNameSayMyName();
     });
 
-    describe('home', function() {
+    describe('nav', function () {
 
         beforeEach(function() {
-            browser.get('#/home');
+            browser.get('#/#home');
         });
 
-        it('should render navigation when user navigates to /home', function () {
+        it('should show a navigation', function () {
+            expect(element(by.css('#home')).isPresent()).toBeTruthy();
             expect(element(by.css('ul.menu.ng-scope li.ng-scope a')).getText()).
                 toMatch(/Home/);
         });
 
-        it('should render title element when user navigates to /home', function() {
+    });
+
+    describe('home', function() {
+
+        it('should render title element', function() {
             sayMyNameSayMyName();
         });
 
@@ -34,10 +39,11 @@ describe('portfolio', function() {
     describe('about', function() {
 
         beforeEach(function() {
-            browser.get('#/about');
+            browser.get('#/#home');
         });
 
-        it('should render about when user navigates to /about', function() {
+        it('should render about', function() {
+            expect(element(by.css('#about')).isPresent()).toBeTruthy();
             expect(element.all(by.css('h2')).first().getText()).
                 toMatch(/About/);
         });
@@ -47,10 +53,11 @@ describe('portfolio', function() {
     describe('footer', function() {
 
         beforeEach(function() {
-            browser.get('#/footer');
+            browser.get('#/#footer');
         });
 
-        it('should render footer when user navigates to /footer', function() {
+        it('should render footer', function() {
+            expect(element(by.css('#meta')).isPresent()).toBeTruthy();
             expect(element.all(by.css('h3')).get(1).getText()).
                 toMatch(/Around the Web/);
         });
