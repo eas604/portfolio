@@ -14,4 +14,8 @@ angular.module('portfolio.home', ['ui.router'])
     st.setPage = function (page) {
         st.transitionTo(page);
     };
+
+    // load partial views here
+    st.setPage('home.nav');
+
 }]);

@@ -5,13 +5,22 @@ describe('portfolio.home module', function() {
     beforeEach(module('portfolio.home'));
 
     describe('home controller', function() {
-        var scope, $httpBackend, ctrl;
+        var scope, $httpBackend, ctrl, state;
 
         beforeEach(module('portfolio'));
 
-        beforeEach(inject(function (_$httpBackend_, $rootScope,  $controller) {
+        beforeEach(inject(function (_$httpBackend_, $rootScope,  $controller, $state) {
+
+            state = $state;
+
             $httpBackend = _$httpBackend_;
 
+            // Expect our partial views. This is a side-effect of
+            // nesting our views in one parent view.
+            $httpBackend.expectGET('home/home.html').respond('<div></div>');
+            $httpBackend.expectGET('nav/nav.html').respond('<div></div>');
+
+            // and our model
             $httpBackend.expectGET('home/home.json').respond({
                 title: 'Home',
                 messages: [
@@ -27,8 +36,10 @@ describe('portfolio.home module', function() {
 
         it('should have a title `home`', function () {
             expect(scope.title).toBeUndefined();
+
             // Ensure the $viewContentLoaded event is fired
             scope.$broadcast('$viewContentLoaded');
+
             $httpBackend.flush();
             expect(scope.title).toEqual('Home');
         });

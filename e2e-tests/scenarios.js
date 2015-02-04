@@ -4,8 +4,14 @@ describe('portfolio', function() {
 
     browser.get('/app/#/');
 
+    var sayMyNameSayMyName = function () {
+        expect(element.all(by.css('h1')).first().getText()).
+            toMatch(/Edwin Sheldon/);
+    };
+
     it('should automatically redirect to /home when location hash/fragment is empty', function() {
         expect(browser.getLocationAbsUrl()).toMatch('/');
+        sayMyNameSayMyName();
     });
 
     describe('home', function() {
@@ -14,9 +20,13 @@ describe('portfolio', function() {
             browser.get('#/home');
         });
 
-        it('should render home when user navigates to /home', function() {
-            expect(element.all(by.css('h1')).first().getText()).
-                toMatch(/Edwin Sheldon/);
+        it('should render navigation when user navigates to /home', function () {
+            expect(element(by.css('ul.menu.ng-scope li.ng-scope a')).getText()).
+                toMatch(/Home/);
+        });
+
+        it('should render title element when user navigates to /home', function() {
+            sayMyNameSayMyName();
         });
 
     });
@@ -46,5 +56,6 @@ describe('portfolio', function() {
         });
 
     });
+
 
 });

@@ -5,14 +5,19 @@ angular.module('portfolio', [
     'ui.router',
     'portfolio.home',
     'portfolio.about',
-    'portfolio.footer'
+    'portfolio.footer',
+    'portfolio.nav'
 ])
     .config(['$stateProvider', function($stateProvider) {
         $stateProvider
             .state('home', {
-                url: '/home',
+                url: '/',
                 templateUrl: 'home/home.html',
                 controller: 'homeCtrl'
+            })
+            .state('home.nav', {
+                templateUrl: 'nav/nav.html',
+                controller: 'navCtrl'
             })
             .state('about', {
                 url: '/about',
