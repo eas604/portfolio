@@ -50,6 +50,25 @@ describe('portfolio', function() {
 
     });
 
+    describe('works', function() {
+
+        beforeEach(function() {
+            browser.get('#/#works');
+        });
+
+        it('should render works', function() {
+            expect(element(by.css('#works')).isPresent()).toBeTruthy();
+            expect(element.all(by.css('#works h3')).get(0).getText()).
+                toMatch(/SEDMAN/);
+        });
+
+        it('should show four eHydro tags', function () {
+            expect(element(by.css('#works .tags')).isPresent()).toBeTruthy();
+            expect(element.all(by.css('#works .tags')).get(1).getText()).toContain('Desktop');
+        });
+
+    });
+
     describe('footer', function() {
 
         beforeEach(function() {
@@ -58,7 +77,7 @@ describe('portfolio', function() {
 
         it('should render footer', function() {
             expect(element(by.css('#meta')).isPresent()).toBeTruthy();
-            expect(element.all(by.css('h3')).get(1).getText()).
+            expect(element.all(by.css('#meta h3')).get(1).getText()).
                 toMatch(/Around the Web/);
         });
 

@@ -1,0 +1,38 @@
+{
+  "title": "Portfolio",
+  "works": [
+    {
+      "app": "SEDMAN",
+      "subtitle": "Sediment Management Technologies",
+      "description": [
+        "A decision support tool to help engineers locate possible sediment management solution technologies based on their input criteria.",
+        "The application is a mobile-first responsive website developed using AngularJS"
+      ],
+      "role": "Lead Developer (Phase 2)",
+      "client": "Engineer Research and Development Center (ERDC)",
+      "keywords": [
+        "AngularJS",
+        "C#",
+        "Mobile",
+        "Web",
+        "MVC"
+      ]
+    },
+    {
+      "app": "eHydro",
+      "description": [
+        "Geoprocessing application and enterprise services to assist the U.S. Army Corps of Engineers with creating, publishing, and sharing channel hydrographic survey data.",
+        "Each USACE district uses the desktop application and geoprocessing tools to publish the surveys and channel geometries to an enterprise server.",
+        "The enterprise server then executes geoprocessing services to store and serve the data to other users."
+      ],
+      "role": "GIS Developer",
+      "client": "U.S. Army Corps of Engineers (USACE)",
+      "keywords": [
+        "Python",
+        "C#",
+        "Desktop",
+        "Server"
+      ]
+    }
+  ]
+}

@@ -7,6 +7,7 @@ angular.module('portfolio', [
     'portfolio.nav',
     'portfolio.hero',
     'portfolio.about',
+    'portfolio.works',
     'portfolio.footer'
 ])
     .config(['$stateProvider', function($stateProvider) {
@@ -28,25 +29,16 @@ angular.module('portfolio', [
                         templateUrl: 'about/about.html',
                         controller: 'aboutCtrl'
                     },
+                    'works@home': {
+                        templateUrl: 'works/works.html',
+                        controller: 'worksCtrl'
+                    },
                     'footer@home': {
                         templateUrl: 'footer/footer.html',
                         controller: 'footerCtrl'
                     }
                 }
             })
-/*            .state('home.nav', {
-                templateUrl: 'nav/nav.html',
-                controller: 'navCtrl'
-            })
-            .state('home.about', {
-                templateUrl: 'about/about.html',
-                controller: 'aboutCtrl'
-            })
-            .state('footer', {
-                url: '/footer',
-                templateUrl: 'footer/footer.html',
-                controller: 'footerCtrl'
-            })*/
         ;
     }])
 ;

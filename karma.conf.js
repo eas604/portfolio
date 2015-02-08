@@ -13,6 +13,7 @@ module.exports = function(config){
             'app/nav/*.js',
             'app/hero/*.js',
             'app/about/*.js',
+            'app/works/*.js',
             'app/footer/*.js'
         ],
 
