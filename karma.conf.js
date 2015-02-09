@@ -14,6 +14,7 @@ module.exports = function(config){
             'app/hero/*.js',
             'app/about/*.js',
             'app/works/*.js',
+            'app/education/*.js',
             'app/footer/*.js'
         ],
 

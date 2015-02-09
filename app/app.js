@@ -8,6 +8,7 @@ angular.module('portfolio', [
     'portfolio.hero',
     'portfolio.about',
     'portfolio.works',
+    'portfolio.education',
     'portfolio.footer'
 ])
     .config(['$stateProvider', function($stateProvider) {
@@ -32,6 +33,10 @@ angular.module('portfolio', [
                     'works@home': {
                         templateUrl: 'works/works.html',
                         controller: 'worksCtrl'
+                    },
+                    'education@home': {
+                        templateUrl: 'education/education.html',
+                        controller: 'educationCtrl'
                     },
                     'footer@home': {
                         templateUrl: 'footer/footer.html',

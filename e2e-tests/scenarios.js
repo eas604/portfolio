@@ -22,8 +22,13 @@ describe('portfolio', function() {
 
         it('should show a navigation', function () {
             expect(element(by.css('#home')).isPresent()).toBeTruthy();
-            expect(element(by.css('ul.menu.ng-scope li.ng-scope a')).getText()).
+            expect(element.all(by.css('ul.menu.ng-scope li.ng-scope a')).first().getText()).
                 toMatch(/Home/);
+        });
+
+        it('should have five navigation links', function () {
+            var linkElements = element.all(by.css('ul.menu.ng-scope li.ng-scope a'));
+            expect(linkElements.count()).toEqual(5);
         });
 
     });
@@ -65,6 +70,34 @@ describe('portfolio', function() {
         it('should show four eHydro tags', function () {
             expect(element(by.css('#works .tags')).isPresent()).toBeTruthy();
             expect(element.all(by.css('#works .tags')).get(1).getText()).toContain('Desktop');
+        });
+
+    });
+
+    describe('education', function() {
+
+        beforeEach(function() {
+            browser.get('#/#education');
+        });
+
+        it('should render education', function() {
+            expect(element(by.css('#education')).isPresent()).toBeTruthy();
+            expect(element.all(by.css('#education h2')).get(0).getText()).
+                toMatch(/Education/);
+        });
+
+        it('should show two degrees', function () {
+            expect(element(by.css('#education h3')).isPresent()).toBeTruthy();
+            expect(element.all(by.css('#education h3')).get(0).getText()).toContain('Information Systems');
+            expect(element.all(by.css('#education h3')).get(1).getText()).toContain('Spanish');
+        });
+
+        it('should show two minors', function () {
+            expect(element(by.css('#education p.minor')).isPresent()).toBeTruthy();
+            expect(element.all(by.css('#education p.minor span.minor'))
+                .get(0).getText()).toContain('Information Technology');
+            expect(element.all(by.css('#education p.minor span.minor'))
+                .get(1).getText()).toContain('Political Science');
         });
 
     });

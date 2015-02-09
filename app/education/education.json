@@ -1,0 +1,19 @@
+{
+  "title": "Education",
+  "degrees": [
+    {
+      "degree": "Master of Science",
+      "concentration": "Information Systems",
+      "school": "The University of South Alabama"
+    },
+    {
+      "degree": "Bachelor of Arts",
+      "concentration": "Spanish",
+      "school": "The University of South Alabama",
+      "minors": [
+        "Information Technology",
+        "Political Science"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+<section class="success" id="education">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h2>{{title}}</h2>
+                <hr class="star-light">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-6" ng-repeat="degree in degrees">
+                <h3>{{degree.degree}} — <span class="concentration">{{degree.concentration}}</span></h3>
+                <p class="school">{{degree.school}}</p>
+                <p class="minor" ng-if="degree.minors">
+                    <strong>Minors: </strong>
+                        <span class="minor" ng-repeat="minor in degree.minors">{{minor}} &nbsp;</span>
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
