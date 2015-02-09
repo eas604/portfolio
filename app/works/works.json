@@ -15,7 +15,8 @@
         "C#",
         "Mobile",
         "Web",
-        "MVC"
+        "MVC",
+        "Bootstrap"
       ]
     },
     {
@@ -23,15 +24,73 @@
       "description": [
         "Geoprocessing application and enterprise services to assist the U.S. Army Corps of Engineers with creating, publishing, and sharing channel hydrographic survey data.",
         "Each USACE district uses the desktop application and geoprocessing tools to publish the surveys and channel geometries to an enterprise server.",
-        "The enterprise server then executes geoprocessing services to store and serve the data to other users."
+        "The enterprise server then executes geoprocessing services to store and serve the data to other users.",
+        "This solution was built by a team of developers and GIS professionals across the Corps of Engineers."
       ],
       "role": "GIS Developer",
       "client": "U.S. Army Corps of Engineers (USACE)",
       "keywords": [
         "Python",
+        "ArcGIS",
         "C#",
         "Desktop",
         "Server"
+      ]
+    },
+    {
+      "app": "SBAS",
+      "subtitle": "Sediment Budget Analysis System",
+      "description": [
+        "A geoprocessing tool to allow engineers to model sediment flow in littoral areas.",
+        "Engineers create \"budgets\" for anticipated sediment flow along coastlines, or import budgets from other modeling solutions.",
+        "These budgets are then published and shared."
+      ],
+      "role": "GIS Developer",
+      "client": "Engineer Research and Development Center (ERDC)",
+      "keywords": [
+        "Python",
+        "ArcGIS",
+        "Desktop",
+        "Server"
+      ]
+    },
+    {
+      "app": "Dredging Technologies",
+      "subtitle": "A particle modeling and dredging decision support tool",
+      "description": [
+        "A web-based decision support tool to enable engineers to identify potential sediment modeling solutions based on input criteria.",
+        "The outputs of these tools then serve as inputs for additional tools, enabling engineers to better model where advance maintenance dredging may be necessary.",
+        "The tool is designed mobile-first under the MVC pattern."
+      ],
+      "role": "Sole Developer",
+      "client": "Engineer Research and Development Center (ERDC)",
+      "keywords": [
+        "C#",
+        "Mobile",
+        "Web",
+        "MVC",
+        "jQuery",
+        "Bootstrap"
+      ]
+    },
+    {
+      "app": "DREDGABL",
+      "subtitle": "Geotechnical Factors in Dredgeability",
+      "url": "http://spatialdata.sam.usace.army.mil/DREDGABL/",
+      "description": [
+        "Breathing new life into a older but useful application for choosing suitable dredges, DREDGABL now lives as a mobile-first web application.",
+        "It enables an engineer to describe various characteristics about the scenario and sediment at a location, and then returns information about the suitability of various dredging solutions.",
+        "Intended as a broad, scoping-level means of narrowing down the list of candidate dredging technologies.",
+        "This application was developed in C# MVC using the jQuery Mobile UI toolkit."
+      ],
+      "role": "Sole Developer",
+      "client": "Engineer Research and Development Center (ERDC)",
+      "keywords": [
+        "C#",
+        "Mobile",
+        "Web",
+        "MVC",
+        "jQuery"
       ]
     }
   ]

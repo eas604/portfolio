@@ -8,7 +8,10 @@
         </div>
         <div class="row">
             <div class="col-lg-6" ng-repeat="work in works">
-                <h3>{{work.app}}</h3>
+                <h3>
+                    <a ng-if="work.url" href="{{work.url}}">{{work.app}}</a>
+                    <span ng-if="!work.url">{{work.app}}</span>
+                </h3>
                 <p ng-if="work.subtitle">{{work.subtitle}}</p>
                 <p ng-repeat="p in work.description">{{p}}</p>
                 <p><strong>Role:</strong> {{work.role}}</p>
