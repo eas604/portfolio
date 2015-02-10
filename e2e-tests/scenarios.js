@@ -22,12 +22,12 @@ describe('portfolio', function() {
 
         it('should show a navigation', function () {
             expect(element(by.css('#home')).isPresent()).toBeTruthy();
-            expect(element.all(by.css('ul.menu.ng-scope li.ng-scope a')).first().getText()).
+            expect(element.all(by.css('ul#home li.ng-scope a')).first().getText()).
                 toMatch(/Home/);
         });
 
         it('should have five navigation links', function () {
-            var linkElements = element.all(by.css('ul.menu.ng-scope li.ng-scope a'));
+            var linkElements = element.all(by.css('ul.menu li.ng-scope a'));
             expect(linkElements.count()).toEqual(5);
         });
 
