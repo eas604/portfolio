@@ -12,7 +12,7 @@ describe('portfolio.education module', function() {
         beforeEach(inject(function (_$httpBackend_, $rootScope,  $controller) {
             $httpBackend = _$httpBackend_;
 
-            $httpBackend.expectGET('education/education.json').respond({
+            $httpBackend.expectGET('models/education.json').respond({
                 title: 'Education',
                 degrees: [{
                     'degree': 'Bachelor of Arts',

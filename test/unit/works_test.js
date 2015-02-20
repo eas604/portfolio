@@ -12,7 +12,7 @@ describe('portfolio.works module', function() {
         beforeEach(inject(function (_$httpBackend_, $rootScope,  $controller) {
             $httpBackend = _$httpBackend_;
 
-            $httpBackend.expectGET('works/works.json').respond({
+            $httpBackend.expectGET('models/works.json').respond({
                 title: 'Portfolio',
                 works: [{
                     app: 'portfolio',

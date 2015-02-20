@@ -12,7 +12,7 @@ describe('portfolio.footer module', function() {
         beforeEach(inject(function (_$httpBackend_, $rootScope,  $controller) {
             $httpBackend = _$httpBackend_;
 
-            $httpBackend.expectGET('footer/footer.json').respond({
+            $httpBackend.expectGET('models/footer.json').respond({
                 location: 'La Mancha',
                 copyright: 'Copyright © 1605 Miguel de Cervantes',
                 web: {twitter: 'https://twitter.com/SwiftOnSecurity'}

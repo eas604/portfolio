@@ -1,1 +1,0 @@
-/* controller is currently empty and as such will not yet need a test */

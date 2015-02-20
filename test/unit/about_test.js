@@ -12,7 +12,7 @@ describe('portfolio.about module', function() {
         beforeEach(inject(function (_$httpBackend_, $rootScope,  $controller) {
             $httpBackend = _$httpBackend_;
 
-            $httpBackend.expectGET('about/about.json').respond({
+            $httpBackend.expectGET('models/about.json').respond({
                 title: 'About',
                 messages: [
                     'Let\'s make the unit',

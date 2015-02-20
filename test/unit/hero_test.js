@@ -15,7 +15,7 @@ describe('portfolio.hero module', function() {
             $httpBackend = _$httpBackend_;
 
             // Load the hero model
-            $httpBackend.expectGET('hero/hero.json').respond({
+            $httpBackend.expectGET('models/hero.json').respond({
                 title: 'hero',
                 messages: [
                     'Human Being',

@@ -17,29 +17,29 @@ angular.module('portfolio', [
                 url: '/',
                 controller: 'homeCtrl',
                 views: {
-                    '': {templateUrl: 'home/home.html'},
+                    '': {templateUrl: 'views/home.html'},
                     'nav@home': {
-                        templateUrl: 'nav/nav.html',
+                        templateUrl: 'views/nav.html',
                         controller: 'navCtrl'
                     },
                     'hero@home': {
-                        templateUrl: 'hero/hero.html',
+                        templateUrl: 'views/hero.html',
                         controller: 'heroCtrl'
                     },
                     'about@home': {
-                        templateUrl: 'about/about.html',
+                        templateUrl: 'views/about.html',
                         controller: 'aboutCtrl'
                     },
                     'works@home': {
-                        templateUrl: 'works/works.html',
+                        templateUrl: 'views/works.html',
                         controller: 'worksCtrl'
                     },
                     'education@home': {
-                        templateUrl: 'education/education.html',
+                        templateUrl: 'views/education.html',
                         controller: 'educationCtrl'
                     },
                     'footer@home': {
-                        templateUrl: 'footer/footer.html',
+                        templateUrl: 'views/footer.html',
                         controller: 'footerCtrl'
                     }
                 }

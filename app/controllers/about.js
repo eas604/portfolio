@@ -4,7 +4,7 @@ angular.module('portfolio.about', ['ui.router'])
 
 .controller('aboutCtrl', ['$scope', '$http', '$state', function (sc, ht, st) {
 
-    ht.get('about/about.json').success(function (data) {
+    ht.get('models/about.json').success(function (data) {
         sc.title = data.title;
         sc.messages = data.messages;
     });

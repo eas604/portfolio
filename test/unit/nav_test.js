@@ -10,7 +10,7 @@ describe('portfolio.nav module', function() {
         beforeEach(inject(function (_$httpBackend_, $rootScope,  $controller) {
             $httpBackend = _$httpBackend_;
 
-            $httpBackend.expectGET('nav/nav.json').respond([
+            $httpBackend.expectGET('models/nav.json').respond([
                 {title: 'gmail', url: 'https://gmail.com'},
                 {title: 'reddit', url: 'https://reddit.com'}
             ]);
