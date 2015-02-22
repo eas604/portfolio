@@ -1,22 +1,49 @@
-[
-  {
-    "title": "Home",
-    "url": "#/"
-  },
-  {
-    "title": "About",
-    "url": "#/#about"
-  },
-  {
-    "title": "Portfolio",
-    "url": "#/#works"
-  },
-  {
-    "title": "Education",
-    "url": "#/#education"
-  },
-  {
-    "title": "Meta",
-    "url": "#/#meta"
-  }
-]
+{
+  "links": [
+    {
+      "title": {
+        "en": "Home",
+        "es": "Início"
+      },
+      "url": "#/"
+    },
+    {
+      "title": {
+        "en": "About",
+        "es": "Sobre"
+      },
+      "url": "#/#about"
+    },
+    {
+      "title": {
+        "en": "Portfolio",
+        "es": "Cartera"
+      },
+      "url": "#/#works"
+    },
+    {
+      "title": {
+        "en": "Education",
+        "es": "Instrucción"
+      },
+      "url": "#/#education"
+    },
+    {
+      "title": {
+        "en": "Meta",
+        "es": "Meta"
+      },
+      "url": "#/#meta"
+    }
+  ],
+  "languages": [
+    {
+      "name": "English",
+      "val": "en"
+    },
+    {
+      "name": "Español",
+      "val": "es"
+    }
+  ]
+}

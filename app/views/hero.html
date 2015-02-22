@@ -9,7 +9,7 @@
                     <h1 class="name">{{title}}</h1>
                     <hr class="star-light">
                     <p>
-                        <span class="skills" ng-repeat="skill in messages">
+                        <span class="skills" ng-repeat="skill in messages[lang]">
                             {{skill}}<span ng-show="!$last"> —</span>
                         </span>
                     </p>

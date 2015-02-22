@@ -1,5 +1,8 @@
 {
-  "title": "Education",
+  "title": {
+    "en": "Education",
+    "es": "Instrucción"
+  },
   "degrees": [
     {
       "degree": "Master of Science",

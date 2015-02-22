@@ -1,8 +1,15 @@
 {
   "title": "Edwin Sheldon",
-  "messages": [
-    "Software Engineer",
-    "Runner",
-    "Adventurer"
-  ]
+  "messages": {
+    "en": [
+      "Software Engineer",
+      "Runner",
+      "Adventurer"
+    ],
+    "es": [
+      "Ingeniero de Software",
+      "Corredor",
+      "Aventurero"
+    ]
+  }
 }

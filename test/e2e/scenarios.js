@@ -9,6 +9,9 @@ describe('portfolio', function() {
             toMatch(/Edwin Sheldon/);
     };
 
+    var en = element(by.css('#en'));
+    var es = element(by.css('#es'));
+
     it('should automatically redirect to /home when location hash/fragment is empty', function() {
         expect(browser.getLocationAbsUrl()).toMatch('/');
         sayMyNameSayMyName();
@@ -16,20 +19,27 @@ describe('portfolio', function() {
 
     describe('nav', function () {
 
-        beforeEach(function() {
-            browser.get('#/#home');
+        it('should have two language buttons', function () {
+            expect(en.isPresent()).toBeTruthy();
+            expect(es.isPresent()).toBeTruthy();
         });
 
         it('should show a navigation', function () {
             expect(element(by.css('#home')).isPresent()).toBeTruthy();
             expect(element.all(by.css('ul#home li.ng-scope a')).first().getText()).
                 toMatch(/Home/);
+            es.click();
+            expect(element.all(by.css('ul#home li.ng-scope a')).first().getText()).
+                toMatch(/Início/);
+            en.click();
         });
 
         it('should have five navigation links', function () {
             var linkElements = element.all(by.css('ul.menu li.ng-scope a'));
             expect(linkElements.count()).toEqual(5);
         });
+
+
 
     });
 
@@ -39,30 +49,40 @@ describe('portfolio', function() {
             sayMyNameSayMyName();
         });
 
+        it('should indicate that some folk say I\'m a terrific athlete', function () {
+            var skills = element.all(by.css('.intro-text p span.skills'));
+            expect(skills).toBeDefined();
+            expect(skills.get(1).getText()).toContain('Runner');
+            es.click();
+            expect(skills.get(1).getText()).toContain('Corredor');
+            en.click();
+        });
     });
 
     describe('about', function() {
-
-        beforeEach(function() {
-            browser.get('#/#home');
-        });
-
         it('should render about', function() {
             expect(element(by.css('#about')).isPresent()).toBeTruthy();
-            expect(element.all(by.css('h2')).first().getText()).
-                toMatch(/About/);
+            var about = element.all(by.css('h2')).first();
+            expect(about.getText()).toMatch(/About/);
+            es.click();
+            expect(about.getText()).toMatch(/Sobre/);
+            en.click();
         });
 
     });
 
     describe('works', function() {
 
-        beforeEach(function() {
-            browser.get('#/#works');
-        });
-
         it('should render works', function() {
             expect(element(by.css('#works')).isPresent()).toBeTruthy();
+
+            var works = element(by.css('#works div.container div.row div.col h2'));
+            expect(works).toBeDefined();
+            expect(works.getText()).toBe('Portfolio');
+            es.click();
+            expect(works.getText()).toBe('Cartera');
+            en.click();
+
             expect(element.all(by.css('#works h3')).get(0).getText()).
                 toMatch(/SEDMAN/);
         });
@@ -76,14 +96,16 @@ describe('portfolio', function() {
 
     describe('education', function() {
 
-        beforeEach(function() {
-            browser.get('#/#education');
-        });
-
         it('should render education', function() {
             expect(element(by.css('#education')).isPresent()).toBeTruthy();
-            expect(element.all(by.css('#education h2')).get(0).getText()).
-                toMatch(/Education/);
+
+            var edu = element.all(by.css('#education h2')).get(0);
+
+            expect(edu.getText()).toBe('Education');
+            es.click();
+            expect(edu.getText()).toBe('Instrucción');
+            en.click();
+
         });
 
         it('should show two degrees', function () {
@@ -104,14 +126,16 @@ describe('portfolio', function() {
 
     describe('footer', function() {
 
-        beforeEach(function() {
-            browser.get('#/#footer');
-        });
-
         it('should render footer', function() {
             expect(element(by.css('#meta')).isPresent()).toBeTruthy();
-            expect(element.all(by.css('#meta h3')).get(1).getText()).
-                toMatch(/Around the Web/);
+
+            var web = element.all(by.css('#meta h3')).get(1);
+
+            expect(web.getText()).toBe('Around the Web');
+            es.click();
+            expect(web.getText()).toBe('Alrededor de la Red');
+            en.click();
+
         });
 
     });

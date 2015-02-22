@@ -8,6 +8,7 @@ angular.module('portfolio.footer', ['ui.router'])
         ht.get('models/footer.json').success(function (data) {
             sc.location = data.location;
             sc.web = data.web;
+            sc.details = data.details;
             sc.copyright = data.copyright;
         });
     });

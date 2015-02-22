@@ -3,6 +3,7 @@
 // Declare app level module which depends on views, and components
 angular.module('portfolio', [
     'ui.router',
+    'btford.markdown',
     'portfolio.home',
     'portfolio.nav',
     'portfolio.hero',

@@ -6,6 +6,17 @@ nav.navbar-default {
     background-color: #333;
 }
 
+.navbar-default .btn-link:hover {
+    color: #bbb;
+    background-color: #444;
+}
+
+.btn-xs {
+    padding: 3px 7px;
+    font-size: 10px;
+    border-radius: 2px;
+}
+
 .menu {
     list-style: none;
     margin-top: 1em;

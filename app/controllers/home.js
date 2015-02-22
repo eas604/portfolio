@@ -2,11 +2,12 @@
 
 angular.module('portfolio.home', ['ui.router'])
 
-    .controller('homeCtrl', ['$scope', '$http', '$state', function (sc, ht, st) {
+    .controller('homeCtrl', ['$scope', function (sc) {
 
-        /*
-         Controller is currently empty. This view's heavy lifting is done by the partial view controllers.
-         Leaving stub in case it is needed later.
-         */
+        sc.lang = 'en';
+
+        sc.changeLang = function(lang) {
+            sc.lang = lang;
+        };
 
     }]);

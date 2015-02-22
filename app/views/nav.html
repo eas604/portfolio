@@ -1,9 +1,21 @@
 <nav class="navbar navbar-default navbar-fixed-top">
     <div class="container">
-        <ul class="menu" id="home">
-            <li ng-repeat="link in links">
-                <a href="{{link.url}}">{{link.title}}</a>
-            </li>
-        </ul>
+        <div class="row">
+            <div class="col col-md-9 col-lg-10">
+                <ul class="menu" id="home">
+                    <li ng-repeat="link in links">
+                        <a href="{{link.url}}">{{link.title[lang]}}</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col col-md-3 col-lg-2">
+                <ul class="menu text-right">
+                    <li ng-repeat="language in languages" class="btn btn-link btn-sm btn-xs"
+                        id="{{language.val}}" ng-click="changeLang(language.val)">
+                            {{language.name}}
+                    </li>
+                </ul>
+            </div>
+        </div>
     </div>
 </nav>

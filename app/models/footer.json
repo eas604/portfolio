@@ -1,10 +1,19 @@
 {
   "location": {
-    "title": "Location",
-    "value": "Mobile, Alabama"
+    "en": {
+      "title": "Location",
+      "value": "Mobile, Alabama"
+    },
+    "es": {
+      "title": "Situación",
+      "value": "Mobile, Alabama, EE.UU."
+    }
   },
   "web": {
-    "title": "Around the Web",
+    "title": {
+      "en": "Around the Web",
+      "es": "Alrededor de la Red"
+    },
     "links": [
       {
         "name": "Twitter",
@@ -22,6 +31,16 @@
         "icon": "fa-github"
       }
     ]
+  },
+  "details": {
+    "en": {
+      "title": "Technical Details",
+      "body": "This site uses [AngularJS](https://angularjs.org/) and [Bootstrap](http://getbootstrap.com/). It was built in Linux and is hosted on FreeBSD, because I've never worked in an environment where `dev` matched `prod` perfectly, and now's not the time to start."
+    },
+    "es": {
+      "title": "Detalles Técnicos",
+      "body": "Este sitio usa [AngularJS](https://angularjs.org/) y [Bootstrap](http://getbootstrap.com/). Fue hecho en Linux and está alojado en FreeBSD, porque jamás he trabajado en un lugar dónde `dev` y `prod` son iguales, y no quiero empezar hacerlo ahora."
+    }
   },
   "copyright": "Copyright © Edwin Sheldon, 2015"
 }

@@ -11,6 +11,11 @@ angular.module('portfolio.hero', ['ui.router'])
             });
         });
 
+        //sc.$on('languageChanged', function (lang) {
+        //    console.log('Received languageChanged');
+        //    sc.changeLang(lang);
+        //});
+
         st.setPage = function (page) {
             st.transitionTo(page);
         };

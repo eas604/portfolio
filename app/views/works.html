@@ -1,13 +1,13 @@
 <section class="success" id="works">
     <div class="container">
         <div class="row">
-            <div class="col-lg-12 text-center">
-                <h2>{{title}}</h2>
+            <div class="col col-lg-12 text-center">
+                <h2>{{title[lang]}}</h2>
                 <hr class="star-light">
             </div>
         </div>
         <div class="row">
-            <div class="col-lg-6" ng-repeat="work in works">
+            <div class="col col-lg-6" ng-repeat="work in works">
                 <h3>
                     <a ng-if="work.url" href="{{work.url}}">{{work.app}}</a>
                     <span ng-if="!work.url">{{work.app}}</span>

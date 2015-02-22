@@ -1,5 +1,8 @@
 {
-  "title": "Portfolio",
+  "title": {
+    "en": "Portfolio",
+    "es": "Cartera"
+  },
   "works": [
     {
       "app": "SEDMAN",

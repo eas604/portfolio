@@ -1,8 +1,18 @@
 {
-  "title": "About",
-  "messages": [
-    "I'm a software engineer from Mobile, Alabama. I have done enterprise back-end, GIS, HIT, and web development using a variety of technologies.",
-    "My recent work has been in C#, AngularJS, and Python, using the MVC pattern.",
-    "I also speak passing Spanish, and run absurdly long distances at near glacial speeds."
-  ]
+  "title": {
+    "en": "About",
+    "es": "Sobre"
+  },
+  "messages": {
+    "en": [
+      "I'm a software engineer from Mobile, Alabama. I have done enterprise back-end, GIS, HIT, and web development using a variety of technologies.",
+      "My recent work has been in C#, AngularJS, and Python, using the MVC pattern.",
+      "I also speak passing Spanish, and run absurdly long distances at near glacial speeds."
+    ],
+    "es": [
+      "Soy ingeniero de software desde Mobile, Alabama, EE.UU. He desarrollado systemas en tecnología de informacíon geográfica, salud y internet, usando una variedad de tecnología.",
+      "Últimamente he trabajado con C#, AngularJS y Python, en el modelo MVC.",
+      "Hablo algo de español y corro distancias largas muy lentamente."
+    ]
+  }
 }

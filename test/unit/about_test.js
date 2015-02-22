@@ -13,12 +13,21 @@ describe('portfolio.about module', function() {
             $httpBackend = _$httpBackend_;
 
             $httpBackend.expectGET('models/about.json').respond({
-                title: 'About',
-                messages: [
-                    'Let\'s make the unit',
-                    'tests for our Angular app',
-                    'in form of haiku'
-                ]
+                title: {
+                    'en': 'About', 'es': 'Sobre'
+                },
+                messages: {
+                    'en': [
+                        'Let\'s make the unit',
+                        'tests for our Angular app',
+                        'in form of haiku'
+                    ],
+                    'es': [
+                        'Cuida que en nada',
+                        'dependas',
+                        'de exceso'
+                    ]
+                }
             });
 
             scope = $rootScope.$new();
@@ -28,13 +37,15 @@ describe('portfolio.about module', function() {
         it('should have a title `About`', function () {
             expect(scope.title).toBeUndefined();
             $httpBackend.flush();
-            expect(scope.title).toEqual('About');
+            expect(scope.title['en']).toEqual('About');
+            expect(scope.title['es']).toEqual('Sobre');
         });
 
         it('should have 3 messages', function () {
             expect(scope.messages).toBeUndefined();
             $httpBackend.flush();
-            expect(scope.messages.length).toBe(3);
+            expect(scope.messages['en'].length).toBe(3);
+            expect(scope.messages['es'].length).toBe(3);
         });
 
     });

@@ -3,11 +3,11 @@
         <div class="container">
             <div class="row">
                 <div class="footer-col col-md-4">
-                    <h3>{{location.title}}</h3>
-                    <p>{{location.value}}</p>
+                    <h3>{{location[lang].title}}</h3>
+                    <p>{{location[lang].value}}</p>
                 </div>
                 <div class="footer-col col-md-4">
-                    <h3>{{web.title}}</h3>
+                    <h3>{{web.title[lang]}}</h3>
                     <ul class="list-inline">
                         <li ng-repeat="link in web.links">
                             <a href="{{link.url}}" class="btn-social btn-outline">
@@ -17,13 +17,8 @@
                     </ul>
                 </div>
                 <div class="footer-col col-md-4">
-                    <h3>Technical Details</h3>
-                    <p class="text-justify">
-                        This site uses <a href="https://angularjs.org/">AngularJS</a> and
-                        <a href="http://getbootstrap.com/">Bootstrap</a>. It was built in Linux and is hosted on FreeBSD,
-                        because I've never worked in an environment where <code>dev</code> matched <code>prod</code> perfectly,
-                        and now's not the time to start.
-                    </p>
+                    <h3>{{details[lang].title}}</h3>
+                    <div class="text-justify" btf-markdown="details[lang].body"></div>
                 </div>
             </div>
         </div>
