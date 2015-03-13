@@ -30,7 +30,7 @@ describe('portfolio', function() {
                 toMatch(/Home/);
             es.click();
             expect(element.all(by.css('ul#home li.ng-scope a')).first().getText()).
-                toMatch(/Início/);
+                toMatch(/Inicio/);
             en.click();
         });
 
