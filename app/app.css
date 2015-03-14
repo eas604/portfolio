@@ -5,12 +5,20 @@ md-toolbar {
     top: 0;
 }
 
-md-content.body {
-    margin-top: 75px;
+.below-nav {
+    margin-top: 72px;
+}
+
+.menu-spacer {
+    margin-top: 3em;
 }
 
 .center {
     text-align: center;
+}
+
+.left {
+    text-align: left;
 }
 
 .md-toolbar-nav {
@@ -22,6 +30,9 @@ md-content.body {
 .md-button-nav {
     padding-left: 1em;
     padding-right: 1em;
+}
+
+.text-nocaps {
     text-transform: none;
 }
 

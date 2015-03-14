@@ -1,4 +1,8 @@
 {
+  "menu": {
+    "en": "Menu",
+    "es": "Menú"
+  },
   "links": [
     {
       "title": {

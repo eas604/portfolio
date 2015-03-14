@@ -12,6 +12,7 @@
     "angular-ui-router": "*",
     "angular-markdown-directive": "~0.3.x",
     "angular-material": "~0.8.x",
+    "angular-material-icons": "~0.4.x",
     "html5-boilerplate": "~4.3.0"
   }
 }

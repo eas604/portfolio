@@ -7,6 +7,7 @@ angular.module('portfolio', [
     'ngAnimate',
     'ngAria',
     'ngMaterial',
+    'ngMdIcons',
     'portfolio.home',
     'portfolio.nav',
     'portfolio.hero',
@@ -15,8 +16,8 @@ angular.module('portfolio', [
     'portfolio.education',
     'portfolio.footer'
 ])
-    .config(['$stateProvider', function($stateProvider) {
-        $stateProvider
+    .config(['$stateProvider', function(stateProvider) {
+        stateProvider
             .state('home', {
                 url: '/',
                 controller: 'homeCtrl',

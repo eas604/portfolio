@@ -1,16 +1,22 @@
 'use strict';
 
-angular.module('portfolio.nav', ['ui.router'])
+angular.module('portfolio.nav', ['ui.router', 'ngMaterial'])
 
-.controller('navCtrl', ['$scope', '$http', '$state', function (sc, ht, st) {
+.controller('navCtrl', ['$scope', '$http', '$mdSidenav',
+        function (sc, ht, mdSidenav) {
 
     ht.get('models/nav.json').success(function (data) {
         sc.links = data.links;
         sc.languages = data.languages;
+        sc.menu = data.menu;
     });
 
-    st.setPage = function (page) {
-        st.transitionTo(page);
+    sc.close = function () {
+        mdSidenav('left').close();
+    };
+
+    sc.toggle = function () {
+        mdSidenav('left').toggle();
     };
 
 }]);

@@ -1,15 +1,38 @@
 <md-toolbar flex="100" layout="row" class="md-default-theme">
-    <div layout-align="left" class="md-toolbar-tools fill-height">
-        <md-button ng-repeat="link in links" ng-href="{{link.url}}" class="md-button-nav">
+    <md-button class="md-primary" flex="20" layout-align="left" hide-gt-sm
+               ng-click="toggle()" aria-label="Menu">
+        <ng-md-icon icon="menu" style="fill: white" size="42"></ng-md-icon>
+    </md-button>
+
+    <div layout-align="left" hide-sm class="md-toolbar-tools fill-height">
+        <md-button ng-repeat="link in links" ng-href="{{link.url}}" class="md-button-nav text-nocaps">
             {{link.title[lang]}}
         </md-button>
     </div>
-    <div layout-align="end" class="md-toolbar-tools">
-        <md-button ng-repeat="language in languages" ng-click="changeLang(language.val)" class="md-button-nav">
+    <div layout-align="end" hide-sm class="md-toolbar-tools">
+        <md-button ng-repeat="language in languages" ng-click="changeLang(language.val)"
+                   class="md-button-nav text-nocaps">
             {{language.name}}
         </md-button>
     </div>
 </md-toolbar>
+<md-sidenav class="md-sidenav-left md-whiteframe-z2" md-component-id="left" md-is-locked-open="false">
+    <md-toolbar class="md-theme-indigo">
+        <h1 class="md-toolbar-tools">{{menu[lang]}}</h1>
+    </md-toolbar>
+    <md-content class="md-padding below-nav" layout="column">
+        <md-button ng-repeat="link in links" ng-click="close()" class="md-primary md-padding text-nocaps left"
+                   ng-href="{{link.url}}">
+            {{link.title[lang]}}
+        </md-button>
+
+        <div class="menu-spacer"></div>
+        <md-button ng-repeat="language in languages" ng-click="close();changeLang(language.val);"
+                   class="md-primary text-nocaps left md-padding">
+            {{language.name}}
+        </md-button>
+    </md-content>
+</md-sidenav>
 
 
 <!--<nav class="md" id="home">-->
