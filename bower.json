@@ -11,7 +11,7 @@
     "angular-mocks": "~1.3.x",
     "angular-ui-router": "*",
     "angular-markdown-directive": "~0.3.x",
-    "bootstrap": "3.*",
+    "angular-material": "~0.8.x",
     "html5-boilerplate": "~4.3.0"
   }
 }

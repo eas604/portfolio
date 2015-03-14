@@ -1,21 +1,35 @@
-<nav class="navbar navbar-default navbar-fixed-top" id="home">
-    <div class="container">
-        <div class="row">
-            <div class="col col-md-9 col-lg-10">
-                <ul class="menu">
-                    <li ng-repeat="link in links">
-                        <a href="{{link.url}}">{{link.title[lang]}}</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="col col-md-3 col-lg-2">
-                <ul class="menu text-right">
-                    <li ng-repeat="language in languages" class="btn btn-link btn-sm btn-xs"
-                        id="{{language.val}}" ng-click="changeLang(language.val)">
-                            {{language.name}}
-                    </li>
-                </ul>
-            </div>
-        </div>
+<md-toolbar flex="100" layout="row" class="md-default-theme">
+    <div layout-align="left" class="md-toolbar-tools fill-height">
+        <md-button ng-repeat="link in links" ng-href="{{link.url}}" class="md-button-nav">
+            {{link.title[lang]}}
+        </md-button>
     </div>
-</nav>
+    <div layout-align="end" class="md-toolbar-tools">
+        <md-button ng-repeat="language in languages" ng-click="changeLang(language.val)" class="md-button-nav">
+            {{language.name}}
+        </md-button>
+    </div>
+</md-toolbar>
+
+
+<!--<nav class="md" id="home">-->
+    <!--<div class="container">-->
+        <!--<div class="row">-->
+            <!--<div class="col col-md-9 col-lg-10">-->
+                <!--<ul class="menu">-->
+                    <!--<li ng-repeat="link in links">-->
+                        <!--<a href="{{link.url}}">{{link.title[lang]}}</a>-->
+                    <!--</li>-->
+                <!--</ul>-->
+            <!--</div>-->
+            <!--<div class="col col-md-3 col-lg-2">-->
+                <!--<ul class="menu text-right">-->
+                    <!--<li ng-repeat="language in languages" class="btn btn-link btn-sm btn-xs"-->
+                        <!--id="{{language.val}}" ng-click="changeLang(language.val)">-->
+                            <!--{{language.name}}-->
+                    <!--</li>-->
+                <!--</ul>-->
+            <!--</div>-->
+        <!--</div>-->
+    <!--</div>-->
+<!--</nav>-->

@@ -4,6 +4,9 @@
 angular.module('portfolio', [
     'ui.router',
     'btford.markdown',
+    'ngAnimate',
+    'ngAria',
+    'ngMaterial',
     'portfolio.home',
     'portfolio.nav',
     'portfolio.hero',
