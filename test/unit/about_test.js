@@ -1,6 +1,14 @@
 'use strict';
 
 describe('portfolio.about module', function() {
+    
+    beforeEach(function(){
+        this.addMatchers({
+            toEqualData: function(expected) {
+                return angular.equals(this.actual, expected);
+            }
+        });
+    });
 
     beforeEach(module('portfolio.about'));
 
@@ -37,8 +45,8 @@ describe('portfolio.about module', function() {
         it('should have a title `About`', function () {
             expect(scope.title).toBeUndefined();
             $httpBackend.flush();
-            expect(scope.title['en']).toEqual('About');
-            expect(scope.title['es']).toEqual('Sobre');
+            expect(scope.title['en']).toEqualData('About');
+            expect(scope.title['es']).toEqualData('Sobre');
         });
 
         it('should have 3 messages', function () {

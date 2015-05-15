@@ -3,9 +3,9 @@
     
     angular.module('portfolio.nav', ['ui.router'])
     
-    .controller('navCtrl', ['$scope', '$http', '$state', function (sc, ht, st) {
+    .controller('navCtrl', ['$scope', '$state', 'Nav', function (sc, st, Nav) {
     
-        ht.get('models/nav.json').success(function (data) {
+        Nav.get(function (data) {
             sc.links = data.links;
             sc.languages = data.languages;
         });

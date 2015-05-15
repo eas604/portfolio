@@ -3,10 +3,10 @@
     
     angular.module('portfolio.footer', ['ui.router'])
     
-    .controller('footerCtrl', ['$scope', '$http', '$state', function (sc, ht, st) {
+    .controller('footerCtrl', ['$scope','$state', 'Footer', function (sc, st, Footer) {
     
         sc.$on('$viewContentLoaded', function () {
-            ht.get('models/footer.json').success(function (data) {
+            Footer.get(function (data) {
                 sc.location = data.location;
                 sc.web = data.web;
                 sc.details = data.details;

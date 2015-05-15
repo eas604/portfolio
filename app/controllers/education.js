@@ -3,9 +3,9 @@
     
     angular.module('portfolio.education', ['ui.router'])
     
-        .controller('educationCtrl', ['$scope', '$http', function (sc, ht) {
+        .controller('educationCtrl', ['$scope', 'Edu', function (sc, Edu) {
     
-            ht.get('models/education.json').success(function (data) {
+            Edu.get(function (data) {
                 sc.title = data.title;
                 sc.degrees = data.degrees;
             });

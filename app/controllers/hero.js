@@ -3,19 +3,14 @@
     
     angular.module('portfolio.hero', ['ui.router'])
     
-        .controller('heroCtrl', ['$scope', '$http', '$state', function (sc, ht, st) {
+        .controller('heroCtrl', ['$scope', '$state', 'Hero', function (sc, st, Hero) {
     
             sc.$on('$viewContentLoaded', function () {
-                ht.get('models/hero.json').success(function (data) {
+                Hero.get(function (data) {
                     sc.title = data.title;
                     sc.messages = data.messages;
                 });
             });
-    
-            //sc.$on('languageChanged', function (lang) {
-            //    console.log('Received languageChanged');
-            //    sc.changeLang(lang);
-            //});
     
             st.setPage = function (page) {
                 st.transitionTo(page);

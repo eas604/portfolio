@@ -4,6 +4,7 @@
     // Declare app level module which depends on views, and components
     angular.module('portfolio', [
         'ui.router',
+        'ngResource',
         'btford.markdown',
         'portfolio.home',
         'portfolio.nav',
@@ -11,7 +12,8 @@
         'portfolio.about',
         'portfolio.works',
         'portfolio.education',
-        'portfolio.footer'
+        'portfolio.footer',
+        'portfolio.services'
     ])
         .config(['$stateProvider', function($stateProvider) {
             $stateProvider

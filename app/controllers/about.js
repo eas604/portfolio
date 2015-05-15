@@ -3,9 +3,10 @@
     
     angular.module('portfolio.about', ['ui.router'])
     
-    .controller('aboutCtrl', ['$scope', '$http', '$state', function (sc, ht, st) {
+    .controller('aboutCtrl', ['$scope', '$state', 'About', 
+            function (sc, st, About) {
     
-        ht.get('models/about.json').success(function (data) {
+        About.get(function (data) {
             sc.title = data.title;
             sc.messages = data.messages;
         });
