@@ -9,7 +9,7 @@
       "subtitle": "Sediment Management Technologies",
       "description": [
         "A decision support tool to help engineers locate possible sediment management solution technologies based on their input criteria.",
-        "The application is a mobile-first responsive website developed using AngularJS"
+        "The application is a mobile-first responsive website developed using AngularJS and Bootstrap."
       ],
       "role": "Lead Developer (Phase 2)",
       "client": "Engineer Research and Development Center (ERDC)",

@@ -1,3 +1,4 @@
+(function (angular) {
 'use strict';
 
 angular.module('portfolio.works', ['ui.router'])
@@ -9,3 +10,4 @@ angular.module('portfolio.works', ['ui.router'])
             sc.works = data.works;
         });
     }]);
+})(angular);
